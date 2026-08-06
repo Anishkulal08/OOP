@@ -1,4 +1,5 @@
 #include<iostream>
+#include<iomanip>
 #include<cmath>
 using namespace std;
 int main(){
@@ -15,5 +16,5 @@ int main(){
 	s=n*t;
 	ans = p * pow((1 + r / n), n * t);
     ci = ans - p;
-	cout<<"Future value :"<<ans<<"Ci :"<<ci;
+	cout<<"Future value :"<<ans<<endl<<"Ci :"<<ci;
 }
