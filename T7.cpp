@@ -12,8 +12,7 @@ int main(){
 	cin>>r;
 	r=r/100;
 	cout<<"\nEnter time the money is invested:";
-	cin>>t;
-	s=n*t;
+	cin>>t; 
 	ans = p * pow((1 + r / n), n * t);
     ci = ans - p;
 	cout<<"Future value :"<<ans<<endl<<"Ci :"<<ci;

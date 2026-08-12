@@ -1,69 +1,96 @@
-#include<iostream>
+#include <iostream>
+#include <iomanip>
+#include <string>
 using namespace std;
 
 int main()
 {
-    string name, regno, grade;
-    int year, sem;
-    int m1,m2,m3,m4,m5,total;
-    float avg;
+    string name, regno;
+    int year, semester;
+    int m1, m2, m3, m4, m5;
+    int total;
+    float average;
+    char grade;
 
-    cout<<"Enter Name:";
-    cin>>name;
+    cout << "Enter Student Name: ";
+    getline(cin, name);
 
-    cout<<"Enter Registration Number:";
-    cin>>regno;
+    cout << "Enter Registration Number: ";
+    cin >> regno;
 
-    cout<<"Enter Year of Joining:";
-    cin>>year;
+    cout << "Enter Year of Joining: ";
+    cin >> year;
 
-    cout<<"Enter Semester:";
-    cin>>sem;
+    cout << "Enter Semester: ";
+    cin >> semester;
 
-    cout<<"Enter Marks of Subject 1:";
-    cin>>m1;
+    cout << "Enter marks in 5 subjects:" << endl;
+    cin >> m1 >> m2 >> m3 >> m4 >> m5;
 
-    cout<<"Enter Marks of Subject 2:";
-    cin>>m2;
+    total = m1 + m2 + m3 + m4 + m5;
+    average = total / 5.0;
 
-    cout<<"Enter Marks of Subject 3:";
-    cin>>m3;
-
-    cout<<"Enter Marks of Subject 4:";
-    cin>>m4;
-
-    cout<<"Enter Marks of Subject 5:";
-    cin>>m5;
-
-    total=m1+m2+m3+m4+m5;
-    avg=total/5.0;
-
-    if(avg>=90)
-        grade="A";
-    else if(avg>=80)
-        grade="B";
-    else if(avg>=60)
-        grade="C";
-    else if(avg>=50)
-        grade="D";
-    else if(avg>=40)
-        grade="E";
+    if (average >= 90)
+        grade = 'A';
+    else if (average >= 80)
+        grade = 'B';
+    else if (average >= 61)
+        grade = 'C';
+    else if (average >= 51)
+        grade = 'D';
+    else if (average >= 41)
+        grade = 'E';
     else
-        grade="F";
+        grade = 'F';
 
-    cout<<"\n******** SCORE CARD ********";
-    cout<<"\nName : "<<name;
-    cout<<"\nRegistration Number : "<<regno;
-    cout<<"\nYear of Joining : "<<year;
-    cout<<"\nSemester : "<<sem;
-    cout<<"\nMarks 1 : "<<m1;
-    cout<<"\nMarks 2 : "<<m2;
-    cout<<"\nMarks 3 : "<<m3;
-    cout<<"\nMarks 4 : "<<m4;
-    cout<<"\nMarks 5 : "<<m5;
-    cout<<"\nTotal : "<<total;
-    cout<<"\nAverage : "<<avg;
-    cout<<"\nGrade : "<<grade;
+    cout << "\n";
+    cout << "-------------------------------------------------------------" << endl;
+    cout << "\n";
+    cout << setw(45) << "Score Card for Student: " << name << endl;
+    cout << "\n";
+
+    cout << "Registration Number: " << regno;
+    cout << setw(25) << "Semester: " << semester;
+    cout << setw(10) << "Year: " << year << endl;
+
+    cout << "\nGrade Assigned: " << grade << endl;
+    cout << "\n";
+
+    cout << setw(8) << "Serial"
+         << setw(25) << "Subject Name"
+         << setw(25) << "Marks Scored" << endl;
+
+    cout << setw(8) << "No."
+         << setw(25) << ""
+         << setw(25) << "(out of 100)" << endl;
+
+    cout << "-------------------------------------------------------------" << endl;
+
+    cout << setw(8) << "1"
+         << setw(25) << "Object Oriented Programming"
+         << setw(25) << m1 << endl;
+
+    cout << setw(8) << "2"
+         << setw(25) << "DBMS"
+         << setw(25) << m2 << endl;
+
+    cout << setw(8) << "3"
+         << setw(25) << "Research methodology"
+         << setw(25) << m3 << endl;
+
+    cout << setw(8) << "4"
+         << setw(25) << "Computational Mathematics"
+         << setw(25) << m4 << endl;
+
+    cout << setw(8) << "5"
+         << setw(25) << "Web technologies"
+         << setw(25) << m5 << endl;
+
+    cout << "\n";
+
+    cout << setw(45) << "Total:" << setw(10) << total << endl;
+    cout << setw(45) << "Average:" << setw(10) << fixed << setprecision(1) << average << endl;
+    cout << setw(45) << "Grade:" << setw(10) << grade << endl;
 
     return 0;
 }

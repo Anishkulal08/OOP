@@ -13,3 +13,4 @@ int main(){
 	std::cout<<"\nA value is:"<<a<<"\nB value is:"<<b;
 	return 0;
 }
+ 
