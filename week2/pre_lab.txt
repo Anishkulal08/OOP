@@ -1,0 +1,32 @@
+Analyze the following for loops in the table and state whether (a) they compile (b) 
+they run (c) They print out a line (d) they print out more than one line. Answer yes or 
+no.  
+No. Action                            Compile?   |   Run?   | Print out a line?     |   Prints out multiple lines? 
+
+
+
+
+1 for (i = 1; i <=10;  i++); 		yes		yes	yes			No
+      cout<<i<<endl; 
+    
+2 for (j = 11; j < 11;   ++j); 		yes		yes	yes			No
+
+     cout<<j<<endl; 
+    
+3 int  j=100; 				yes		yes	yes			No
+
+for (int j = 1; j <=10;  j++); 
+    cout<<j<<endl; 
+    
+4 for (j = 1; j <= 10; j++) 		NO		No	No			No	
+     cout<<”Hello\n”; 
+    
+5 for (j = 1; j <= 10; j++) 		NO		No	No			No	
+{ 
+     if( j < 5) continue; 
+     cout<<j<<”\n”; 
+} 
+    
+6 for (j = 1, j <= 10, j++) 
+      cout<<“Hello\n”; 
+   
