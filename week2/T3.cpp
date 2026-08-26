@@ -16,10 +16,6 @@ int main(){
 	cout<<"\nBinary number is:"<<bn<<endl;
 	cout<<"\nEnter the bit number:";
 	cin>>b;
-
-    
-	
-	
 	while(b>0){
 		n=b%10;
 		dig=dig+(n*i);

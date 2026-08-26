@@ -13,13 +13,17 @@ int main(){
 		cout<<"\n";
 	}
 	cout<<"\n";
-	char ch[]={'A','B','C','D','E'};
+	
 	for(i=0;i<n;i++){
+		int c=0;
 		for(j=0;j<n-i;j++){
-			cout<<ch[j]<<"\t";
+		
+			cout<<char(65+c)<<"\t";
+			c++;
 			}
 		cout<<"\n";
 	}
+	
 	cout<<"\n";
 	for(i=0;i<n-1;i++){
 		for(j=0;j<=i;j++){
@@ -43,7 +47,7 @@ int main(){
 	while(m<n){
 		p=0;
 		while(p<n-m){
-			cout<<ch[p]<<"\t";
+			cout<<char(65+p)<<"\t";
 			p++;
 		}
 		cout<<"\n";
@@ -62,3 +66,4 @@ int main(){
 	}
 	
 }
+
