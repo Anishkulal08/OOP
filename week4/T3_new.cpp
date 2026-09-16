@@ -35,7 +35,6 @@ public:
         cin >> not_out;
     }
 
-    // Average runs of a single player
     void average_run()
     {
         int out = matches_play - not_out;
@@ -53,7 +52,6 @@ public:
         }
     }
 
-    // Function overloaded: Average runs of all players
     void average_run(cricket p[], int count)
     {
         if(count == 0)
@@ -162,7 +160,6 @@ int main()
 
             case 4:
             {
-                // Sort complete objects, not just total_runs
                 for(int i = 0; i < count - 1; i++)
                 {
                     for(int j = 0; j < count - i - 1; j++)
